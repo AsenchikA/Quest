@@ -1,0 +1,19 @@
+.container {
+  width: 930px;
+}
+
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-(@n) {
+  width: calc (@n / 12 * 100%);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-offset-(@n) {
+  margin-left: calc (@n / 12 * 100%);
+}
