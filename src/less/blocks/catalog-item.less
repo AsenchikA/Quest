@@ -1,0 +1,143 @@
+.catalog-item {
+  display: block;
+  position: relative;
+  padding: 25px 20px;
+  min-height: 280px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: left;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid @brand-color;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  &:nth-child(1) {
+    width: 100%;
+    background: url('../img/catalog-item-background-1.jpg') no-repeat;
+    background-size: cover;
+
+    &:before {
+      width: 40px;
+      height: 45px;
+      background-image: url(../img/catalog-item-1.png);
+    }
+  }
+
+  &:nth-child(2) {
+    width: 460px;
+    background: url('../img/catalog-item-background-2.jpg') no-repeat;
+    background-size: cover;
+
+    & .catalog-item__title {
+      padding-left: 60px;
+    }
+
+    &:before {
+      width: 50px;
+      height: 40px;
+      background-image: url(../img/catalog-item-2.png);
+    }
+  }
+
+  &:nth-child(3) {
+    width: 460px;
+    background: url('../img/catalog-item-background-3.jpg') no-repeat;
+    background-size: cover;
+
+    &:before {
+      width: 40px;
+      height: 46px;
+      background-image: url(../img/catalog-item-3.png);
+    }
+  }
+
+  &:nth-child(2n) {
+    margin-right: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    width: 280px;
+    font-size: @h3-size;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: @brand-color;
+  }
+
+  &__about {
+    width: 50%;
+    font-size: @text-size;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  &__details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &__details-item {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    padding-left: 30px;
+    font-size: @text-color - 2px;
+    color: @brand-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    &--people:before {
+      width: 26px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--people.png);
+    }
+
+    &--cost:before {
+      width: 23px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--cost.png);
+    }
+
+    &--time:before {
+      width: 22px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--time.png);
+    }
+  }
+
+  &__opening {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: @text-size + 6px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  &__opening-title {
+    color: #fff;
+  }
+
+  &__opening-date {
+    color: @brand-color;
+  }
+}
+

@@ -1,0 +1,34 @@
+.catalog {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background: url(../img/catalog-background.jpg);
+  background-size: cover;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 123px;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url(../img/catalog-before.png);
+  }
+
+  &__container {
+    .container;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: @h2-size;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: @brand-color;
+  }
+}
