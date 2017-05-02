@@ -1,0 +1,43 @@
+.reviews {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  &__container {
+    position: relative;
+    .container;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: @h2-size;
+    font-weight: 300;
+    color: @brand-color;
+  }
+
+  &__arrows {
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+    border: 2px solid #477773;
+    background: url('../img/reviews-arrow.png') center no-repeat;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--next {
+      right: 0;
+      top: -70px;
+    }
+
+    &--prev {
+      right: 57px;
+      top: -70px;
+      transform: rotate(180deg);
+    }
+  }
+}

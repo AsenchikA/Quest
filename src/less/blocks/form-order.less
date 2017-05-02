@@ -1,0 +1,85 @@
+.form-order {
+  display: flex;
+
+  &__col:nth-child(1) {
+    margin-right: 10px;
+    width: 610px;
+  }
+
+  &__col:nth-child(2) {
+    width: 310px;
+  }
+
+  &__message {
+    padding: 20px;
+    height: 170px;
+    background: transparent;
+    font-size: @text-size - 2px;
+    font-weight: 300;
+    font-family: "OpenSans";
+    color: #fff;
+    border: 1px solid #3a6b68;
+
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {color: transparent;}
+      &::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+      &:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color: transparent;}
+    }
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+  }
+
+  &__input {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+    background: transparent;
+    font-size: @text-size - 2px;
+    font-weight: 300;
+    font-family: "OpenSans";
+    line-height: 50px;
+    color: #fff;
+    border: 1px solid #3a6b68;
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {color: transparent;}
+      &::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+      &:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color: transparent;}
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 50px;
+    background: #3f7772;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: @text-size + 2px;
+    font-weight: 300;
+    line-height: 50px;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
