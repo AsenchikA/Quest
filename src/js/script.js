@@ -24,4 +24,40 @@ $(document).ready(function(){
     });
   };
 anchorScroll('#main-menu');
+
+//появление сообщения об отправке отзыва
+
+    $("#btn-review").click(function() {
+      if ($('.not_error').length == 2){
+        $("#message-success").fadeIn(600);
+    }
+  });
+
+//валидация отправки отзыва
+
+     $("#reviewValidate").validate({
+       rules:{
+
+            reviewName:{
+              required: true
+            },
+
+            reviewEmail:{
+              required: true,
+              email: true,
+            },
+       },
+
+       messages:{
+            reviewName:{
+              required: "",
+            },
+
+            reviewEmail:{
+              required: "",
+              email:"",
+            },
+       }
+    });
+
 });
