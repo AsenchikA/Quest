@@ -1,0 +1,35 @@
+.experiment-promo {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  background-image: url(../img/experiment-promo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    .container;
+  }
+
+  &__title {
+    position: relative;
+    width: 50%;
+    margin: 0;
+    padding-left: 80px;
+    font-size: @h1-size - 4px;
+    font-weight: 300;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 71px;
+      height: 80px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-image: url(../img/experiment-before.png);
+    }
+  }
+}

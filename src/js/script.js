@@ -23,7 +23,7 @@ $(document).ready(function(){
       $('body,html').animate({'scrollTop':idPosition},scrollTime);
     });
   };
-anchorScroll('#main-menu');
+anchorScroll('#main-page-menu');
 
 //появление сообщения об отправке отзыва
 
