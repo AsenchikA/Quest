@@ -2,12 +2,12 @@ $(document).ready(function(){
 
   //карусель в отзывах
 
-  $(".owl-carousel").owlCarousel({
+  $("#reviews-carousel").owlCarousel({
     loop: true,
     items: 2,
     margin: 8,
     nav: true,
-    navClass: ['reviews__arrows reviews__arrows--prev','reviews__arrows reviews__arrows--next'],
+    navClass: ['arrow reviews__arrow reviews__arrow--prev','arrow reviews__arrow reviews__arrow--next'],
     navText: ['',''],
   });
 
@@ -78,5 +78,74 @@ anchorScroll('#main-page-menu');
     dots: false,
     focusOnSelect: true
   });
+
+//слайдер выбора времени и даты для брони
+
+  $("#booking-carosel").owlCarousel({
+    loop: true,
+    items: 5,
+    nav: true,
+    navClass: ['arrow booking-dates__arrow booking-dates__arrow--prev','arrow booking-dates__arrow booking-dates__arrow--next'],
+    navText: ['',''],
+  });
+
+// появление формы брони при выборе даты
+
+$('.booking-dates__time-item:not(.booking-dates__time-item--busy)').click(function(){
+  var time = $(this).html();
+  $("#verification-time").html(time);
+  var weekDay = $(this).parents(".booking-dates__item").hasClass("booking-dates__item--holiday");
+  if (weekDay == true) {
+    $("#verification-cost").html("3000 р.");
+  }
+  else {
+    $("#verification-cost").html("2500 р.")
+  }
+  var date = $(this).parents(".booking-dates__item").children('.booking-dates__item-date').html();
+  $("#verification-date").html(date);
+  $('#booking-modal').show('slow');
+});
+
+$('.booking-verification__close').click(function(e){
+  e.preventDefault();
+  $('#booking-modal').hide('slow');
+});
+
+//валидация формы брони
+
+     $("#bookingValidate").validate({
+       rules:{
+
+            bookingName:{
+              required: true
+            },
+
+            bookingPhone:{
+              required: true,
+              digits: true
+            },
+
+            bookingEmail:{
+              required: true,
+              email: true,
+            },
+       },
+
+       messages:{
+            bookingName:{
+              required: "",
+            },
+
+            bookingPhone:{
+              required: "",
+              digits: ""
+            },
+
+            bookingEmail:{
+              required: "",
+              email:"",
+            },
+       }
+    });
 
 });

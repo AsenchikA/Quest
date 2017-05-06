@@ -1,0 +1,100 @@
+.form-booking {
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__col {
+    &:nth-child(1) {
+      width: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &:nth-child(2) {
+      width: 510px;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    width: 100%;
+    font-size: @text-size - 2px;
+    font-weight: 300;
+    font-family: "OpenSans";
+    color: #fff;
+    background: transparent;
+    border: 2px solid @brand-color;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {color: transparent;}
+      &::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+      &:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color: transparent;}
+    }
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+
+  }
+
+  &__message {
+    padding-top: 18px;
+    padding-left: 18px;
+    height: 100%;
+    width: 100%;
+    font-size: @text-size - 2px;
+    font-weight: 300;
+    font-family: "OpenSans";
+    color: #fff;
+    background: transparent;
+    border: 2px solid @brand-color;
+
+    &:focus {
+      outline: none;
+      &::-webkit-input-placeholder {color: transparent;}
+      &::-moz-placeholder          {color: transparent;}/* Firefox 19+ */
+      &:-moz-placeholder           {color: transparent;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color: transparent;}
+    }
+
+    &::-webkit-input-placeholder {color:#fff;}
+    &::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:#fff;}
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  &__details-title {
+    font-size: @text-size + 8px;
+    font-weight: 300;
+    color: @text-color;
+  }
+
+  &__details-content {
+    font-size: @text-size + 20px;
+    font-weight: 300;
+    color: @brand-color;
+    text-transform: uppercase;
+  }
+
+  & &__btn {
+    width: 260px;
+  }
+}
