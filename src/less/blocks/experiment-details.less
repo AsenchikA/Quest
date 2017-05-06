@@ -1,0 +1,46 @@
+.experiment-details {
+  .col-(3);
+
+  & &__item {
+    margin-bottom: 20px;
+    font-size: @text-size + 2px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    font-size: @text-size - 2px;
+    color: @brand-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    &--people:before {
+      width: 26px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--people.png);
+    }
+
+    &--cost:before {
+      width: 23px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--cost.png);
+    }
+
+    &--time:before {
+      width: 22px;
+      height: 30px;
+      background-image: url(../img/catalog-item__details-item--time.png);
+    }
+  }
+}

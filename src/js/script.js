@@ -60,14 +60,14 @@ anchorScroll('#main-page-menu');
        }
     });
 
-  $('#experiment-big').slick({ // галерея на странице index.html
+  $('#experiment-big').slick({ // галерея на странице action.html
     slidesToShow: 1,
     slidesToScroll: 1,
-    // arrows: false,
+    arrows: true,
     fade: true,
     asNavFor: '#experiment-thumbs',
     prevArrow: '<i class="experiment-big__arrow experiment-big__arrow--prev"></i>',
-    nextArrow: '<i class="experiment-big__arrow experiment-big__arrow--next"></i>'
+    nextArrow: '<i class="experiment-big__arrow experiment-big__arrow--next"></i>',
   });
   $('#experiment-thumbs').slick({
     slidesToShow: 7,
@@ -76,7 +76,7 @@ anchorScroll('#main-page-menu');
     infinite: true,
     asNavFor: '#experiment-big',
     dots: false,
-    focusOnSelect: false
+    focusOnSelect: true
   });
 
 });
