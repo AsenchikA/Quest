@@ -1,0 +1,23 @@
+.experiment-gallery {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 123px;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url(../img/gear.png);
+  }
+  &__container {
+    .container;
+    display: flex;
+    justify-content: space-between;
+  }
+}

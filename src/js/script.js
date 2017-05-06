@@ -60,4 +60,23 @@ anchorScroll('#main-page-menu');
        }
     });
 
+  $('#experiment-big').slick({ // галерея на странице index.html
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // arrows: false,
+    fade: true,
+    asNavFor: '#experiment-thumbs',
+    prevArrow: '<i class="experiment-big__arrow experiment-big__arrow--prev"></i>',
+    nextArrow: '<i class="experiment-big__arrow experiment-big__arrow--next"></i>'
+  });
+  $('#experiment-thumbs').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    vertical: true,
+    infinite: true,
+    asNavFor: '#experiment-big',
+    dots: false,
+    focusOnSelect: false
+  });
+
 });
