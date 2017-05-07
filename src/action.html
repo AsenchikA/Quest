@@ -183,7 +183,7 @@
       <form action="" class="form-booking" id="bookingValidate">
         <div class="form-booking__data">
           <div class="form-booking__col">
-            <input type="text" class="form-booking__input" placeholder="Имя" name="bookingName">
+            <input type="text" class="form-booking__input" name="bookingName" id="reviewName"><label for="reviewName" class="form-booking__label form-booking__label--name" id="labelName">Имя <span>(обязательно)</span></label>
             <input type="text" class="form-booking__input" placeholder="Телефон" name="bookingPhone">
             <input type="text" class="form-booking__input" placeholder="Почта" name="bookingEmail">
           </div>
@@ -230,7 +230,7 @@
             <a class="order-btn">записаться на квест</a>
           </div>
           <div class="contacts__col">
-            <div class="map"></div>
+            <div class="main-map" id="map"></div>
           </div>
         </div>
       </div>
@@ -242,5 +242,6 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgAnixYrzVr0HosNK-VgoAxHdFUQNH784&callback=initMap" async defer></script>
 </body>
 </html>

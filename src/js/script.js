@@ -1,3 +1,175 @@
+//Google-карта
+
+// Определяем переменную map
+  var map;
+
+// Функция initMap которая отрисует карту на странице
+  function initMap() {
+
+  // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
+    map = new google.maps.Map(document.getElementById('map'), {
+      // При создании объекта карты необходимо указать его свойства
+      // center - определяем точку на которой карта будет центрироваться
+      center: {lat: 59.945598, lng: 30.276416},
+      // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
+      zoom: 18,
+      styles:[
+        {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#000000"
+            },
+            {
+              "lightness": 13
+            }
+          ]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#144b53"
+            },
+            {
+              "lightness": 14
+            },
+            {
+              "weight": 1.4
+            }
+          ]
+        },
+        {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [
+            {
+              "color": "#08304b"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#0c4152"
+            },
+            {
+              "lightness": 5
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#0b434f"
+            },
+            {
+              "lightness": 25
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry.fill",
+          "stylers": [
+            {
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "geometry.stroke",
+          "stylers": [
+            {
+              "color": "#0b3d51"
+            },
+            {
+              "lightness": 16
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#000000"
+            }
+          ]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [
+            {
+              "color": "#146474"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [
+            {
+              "color": "#021019"
+            }
+          ]
+        }
+      ]
+    });
+
+  // Создаем маркер на карте
+  var marker = new google.maps.Marker({
+
+    // Определяем позицию маркера
+    position: {lat: 59.945598, lng: 30.276416},
+
+    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+    map: map,
+
+    // Пишем название маркера - появится если навести на него курсор и немного подождать
+    title: 'Quest',
+
+    // Укажем свою иконку для маркера
+    icon: 'img/map-marker.png'
+
+  });
+};
+
 $(document).ready(function(){
 
   //карусель в отзывах
@@ -27,38 +199,37 @@ anchorScroll('#main-page-menu');
 
 //появление сообщения об отправке отзыва
 
-    $("#btn-review").click(function() {
-      if ($('.not_error').length == 2){
-        $("#message-success").fadeIn(600);
-    }
+    $("#btn-review").click(function(e) {
+      e.preventDefault();
+      $("#message-success").fadeIn(600);
   });
 
 //валидация отправки отзыва
 
-     $("#reviewValidate").validate({
-       rules:{
+    //  $("#reviewValidate").validate({
+    //    rules:{
 
-            reviewName:{
-              required: true
-            },
+    //         reviewName:{
+    //           required: true
+    //         },
 
-            reviewEmail:{
-              required: true,
-              email: true,
-            },
-       },
+    //         reviewEmail:{
+    //           required: true,
+    //           email: true,
+    //         },
+    //    },
 
-       messages:{
-            reviewName:{
-              required: "",
-            },
+    //    messages:{
+    //         reviewName:{
+    //           required: "",
+    //         },
 
-            reviewEmail:{
-              required: "",
-              email:"",
-            },
-       }
-    });
+    //         reviewEmail:{
+    //           required: "",
+    //           email:"",
+    //         },
+    //    }
+    // });
 
   $('#experiment-big').slick({ // галерея на странице action.html
     slidesToShow: 1,
@@ -113,39 +284,50 @@ $('.booking-verification__close').click(function(e){
 
 //валидация формы брони
 
-     $("#bookingValidate").validate({
-       rules:{
+    //  $("#bookingValidate").validate({
+    //    rules:{
 
-            bookingName:{
-              required: true
-            },
+    //         bookingName:{
+    //           required: true
+    //         },
 
-            bookingPhone:{
-              required: true,
-              digits: true
-            },
+    //         bookingPhone:{
+    //           required: true,
+    //           digits: true
+    //         },
 
-            bookingEmail:{
-              required: true,
-              email: true,
-            },
-       },
+    //         bookingEmail:{
+    //           required: true,
+    //           email: true,
+    //         },
+    //    },
 
-       messages:{
-            bookingName:{
-              required: "",
-            },
+    //    messages:{
+    //         bookingName:{
+    //           required: "",
+    //         },
 
-            bookingPhone:{
-              required: "",
-              digits: ""
-            },
+    //         bookingPhone:{
+    //           required: "",
+    //           digits: ""
+    //         },
 
-            bookingEmail:{
-              required: "",
-              email:"",
-            },
-       }
-    });
+    //         bookingEmail:{
+    //           required: "",
+    //           email:"",
+    //         },
+    //    }
+    // });
 
+     $('#reviewEmail').change(function(){
+      if ($(this).val() != '') {
+        $("#labelEmail").css('display', 'none');
+      }
+     });
+
+      $('#reviewName').change(function(){
+        if ($(this).val() != '') {
+          $("#labelName").css('display', 'none');
+        }
+     });
 });
