@@ -204,6 +204,12 @@ anchorScroll('#main-page-menu');
       $("#message-success").fadeIn(600);
   });
 
+    $("#order-btn").click(function(e) {
+      e.preventDefault();
+      $(this).css('display', 'none');
+      $("#message-success").fadeIn(600);
+  });
+
 //валидация отправки отзыва
 
     //  $("#reviewValidate").validate({
@@ -280,6 +286,8 @@ $('.booking-dates__time-item:not(.booking-dates__time-item--busy)').click(functi
 $('.booking-verification__close').click(function(e){
   e.preventDefault();
   $('#booking-modal').hide('slow');
+  $('#order-btn').css('display', 'block');
+  $("#message-success").fadeOut(600);
 });
 
 //валидация формы брони
@@ -319,15 +327,21 @@ $('.booking-verification__close').click(function(e){
     //    }
     // });
 
-     $('#reviewEmail').change(function(){
+     $('#formEmail').change(function(){
       if ($(this).val() != '') {
         $("#labelEmail").css('display', 'none');
       }
      });
 
-      $('#reviewName').change(function(){
+      $('#formName').change(function(){
         if ($(this).val() != '') {
           $("#labelName").css('display', 'none');
         }
+     });
+
+     $('#formЗрщту').change(function(){
+      if ($(this).val() != '') {
+        $("#labelPhone").css('display', 'none');
+      }
      });
 });

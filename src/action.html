@@ -183,9 +183,9 @@
       <form action="" class="form-booking" id="bookingValidate">
         <div class="form-booking__data">
           <div class="form-booking__col">
-            <input type="text" class="form-booking__input" name="bookingName" id="reviewName"><label for="reviewName" class="form-booking__label form-booking__label--name" id="labelName">Имя <span>(обязательно)</span></label>
-            <input type="text" class="form-booking__input" placeholder="Телефон" name="bookingPhone">
-            <input type="text" class="form-booking__input" placeholder="Почта" name="bookingEmail">
+            <input type="text" class="form-booking__input" name="bookingName" id="formName"><label for="bookingName" class="form-booking__label form-booking__label--name" id="labelName">Имя <span>(обязательно)</span></label>
+            <input type="text" class="form-booking__input" name="bookingPhone" id="formPhone"><label for="bookingPhone" class="form-booking__label form-booking__label--phone" id="labelPhone">Телефон <span>(обязательно)</span></label>
+            <input type="text" class="form-booking__input" name="bookingEmail" id="formEmail"><label for="bookingEmail" class="form-booking__label form-booking__label--email" id="labelEmail">Почта <span>(обязательно)</span></label>
           </div>
           <div class="form-booking__col">
             <textarea name="" id="" cols="30" rows="10" class="form-booking__message" placeholder="Сообщение"></textarea>
@@ -205,7 +205,8 @@
             <div class="form-booking__details-content" id="verification-cost"></div>
           </div>
         </div>
-        <button class="form-booking__btn order-btn">забронировать</button>
+        <button class="form-booking__btn order-btn" id="order-btn">забронировать</button>
+        <div class="form-success" id="message-success"><div class="form-success__img"></div>Спасибо! Ваш отзыв отправлен на модерацию.</div>
       </form>
     </div>
   </section>

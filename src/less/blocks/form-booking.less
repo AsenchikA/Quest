@@ -1,8 +1,15 @@
 .form-booking {
+  position: relative;
+
+  & .form-success {
+    top: inherit;
+    bottom: -50px;
+  }
+
   &__data {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   &__col {
@@ -11,7 +18,6 @@
       width: 310px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
     }
 
     &:nth-child(2) {
@@ -20,7 +26,7 @@
   }
 
   &__input {
-    flex-grow: 1;
+    height: 50px;
     margin-bottom: 10px;
     padding-left: 18px;
     width: 100%;
@@ -31,12 +37,16 @@
     background: transparent;
     border: 2px solid @brand-color;
 
-    &:last-child {
+    &:nth-child(5) {
       margin-bottom: 0;
     }
 
     &:focus {
       outline: none;
+
+      & +.form-booking__label {
+        display: none;
+      }
     }
 
   }
@@ -44,7 +54,7 @@
   &__message {
     padding-top: 18px;
     padding-left: 18px;
-    height: 100%;
+    height: 170px;
     width: 100%;
     font-size: @text-size - 2px;
     font-weight: 300;
@@ -78,8 +88,12 @@
       top: 20px;
     }
 
-    &--mail {
+    &--phone {
       top: 75px;
+    }
+
+    &--email {
+      top: 135px;
     }
 
    & span {
@@ -90,7 +104,7 @@
   &__details {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   &__details-title {
@@ -108,5 +122,6 @@
 
   & &__btn {
     width: 260px;
+    margin: 0 auto;
   }
 }
