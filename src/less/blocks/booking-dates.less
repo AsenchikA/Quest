@@ -5,17 +5,17 @@
   &__item {
     font-size: @text-size + 8px;
     font-weight: 300;
-    color: @text-color;
+    color: @brand-color;
     text-align: center;
 
     &--holiday {
-      color: @brand-color;
+      color: @text-color;
     }
   }
 
   &__item-day {
     font-size: @text-size + 2px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   &__time {
@@ -24,7 +24,7 @@
   }
 
   &__time-item {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
     &:hover {
       cursor: pointer;
@@ -46,12 +46,12 @@
 
     &--next {
       right: -30px;
-      top: 0;
+      top: 5px;
     }
 
     &--prev {
       left: -30px;
-      top: 0;
+      top: 5px;
       transform: rotate(180deg);
     }
   }

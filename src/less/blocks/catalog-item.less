@@ -1,7 +1,8 @@
 .catalog-item {
   display: block;
   position: relative;
-  padding: 25px 20px;
+  padding: 20px;
+  // padding-top: 23px;
   min-height: 280px;
   margin-bottom: 10px;
   text-decoration: none;
@@ -65,9 +66,9 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-left: 50px;
-    width: 280px;
+    max-width: 300px;
     font-size: @h3-size;
     line-height: 24px;
     text-transform: uppercase;
@@ -83,7 +84,7 @@
 
   &__details {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 20px;
   }
 
@@ -95,7 +96,7 @@
   &__opening {
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
     font-size: @text-size + 6px;
     text-transform: uppercase;
     text-align: right;
