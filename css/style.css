@@ -267,8 +267,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 17px;
   background-color: #000;
   z-index: 2000;
 }
@@ -301,18 +301,21 @@ body {
       align-items: center;
 }
 .main-nav__item {
-  margin-left: 30px;
+  margin-left: 28px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 300;
   color: #7ec9c3;
 }
+.soc-links {
+  margin-left: 10px;
+}
 .soc-links__item {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 30px;
+  margin-left: 16px;
   width: 40px;
   height: 40px;
   border: 1px solid #7ec9c3;
@@ -329,9 +332,10 @@ body {
 }
 .promo {
   padding-top: 160px;
-  padding-bottom: 100px;
+  padding-bottom: 98px;
   background: #000 url(../img/promo-background.jpg);
   background-size: cover;
+  border-bottom: 2px solid #7ec9c3;
 }
 .promo__container {
   width: 930px;
@@ -339,7 +343,7 @@ body {
 }
 .promo__logo {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   height: 310px;
   width: 290px;
   background: url(../img/logo-2.png) center -160px;
@@ -349,13 +353,14 @@ body {
   margin: 0 auto;
   width: 610px;
   font-size: 40px;
+  line-height: 48px;
   font-weight: 300;
   color: #7ec9c3;
   text-align: center;
 }
 .catalog {
   position: relative;
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 70px;
   overflow: hidden;
 }
@@ -364,7 +369,7 @@ body {
   position: absolute;
   width: 90px;
   height: 123px;
-  top: -50px;
+  top: -47px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -386,7 +391,7 @@ body {
 .catalog-item {
   display: block;
   position: relative;
-  padding: 25px 20px;
+  padding: 20px;
   min-height: 280px;
   margin-bottom: 10px;
   text-decoration: none;
@@ -440,9 +445,9 @@ body {
 }
 .catalog-item__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 50px;
-  width: 280px;
+  max-width: 300px;
   font-size: 22px;
   line-height: 24px;
   text-transform: uppercase;
@@ -456,7 +461,7 @@ body {
 }
 .catalog-item__details {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   left: 20px;
 }
 .catalog-item__details-item {
@@ -466,7 +471,7 @@ body {
 .catalog-item__opening {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 10px;
   font-size: 22px;
   text-transform: uppercase;
   text-align: right;
@@ -484,7 +489,7 @@ body {
       flex-wrap: wrap;
 }
 .about-us {
-  padding-top: 60px;
+  padding-top: 45px;
   padding-bottom: 90px;
   background-color: #000;
   text-align: center;
@@ -495,7 +500,7 @@ body {
 }
 .about-us__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   font-size: 36px;
   font-weight: 300;
   text-transform: uppercase;
@@ -518,11 +523,11 @@ body {
   display: flex;
   margin-left: -15px;
   margin-right: -15px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 .advantages__item {
   position: relative;
-  width: calc(33.33333333%);
+  width: calc(25%);
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 110px;
@@ -541,6 +546,7 @@ body {
   margin: 0 auto;
 }
 .advantages__item--machines:before {
+  bottom: 75px;
   width: 80px;
   height: 80px;
   background: url(../img/advantages--machines.png) no-repeat;
@@ -561,7 +567,7 @@ body {
   background: url(../img/advantages--transport.png) no-repeat;
 }
 .reviews {
-  padding-top: 70px;
+  padding-top: 62px;
   padding-bottom: 80px;
   text-align: center;
 }
@@ -572,7 +578,7 @@ body {
 }
 .reviews__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-transform: uppercase;
   font-size: 36px;
   font-weight: 300;
@@ -580,19 +586,19 @@ body {
 }
 .reviews__arrow--next {
   right: 0;
-  top: -70px;
+  top: -72px;
 }
 .reviews__arrow--prev {
   right: 57px;
-  top: -70px;
+  top: -72px;
   transform: rotate(180deg);
 }
 .reviews-list {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .reviews-list__item {
   padding-left: 30px;
-  padding-top: 35px;
+  padding-top: 32px;
   padding-right: 50px;
   padding-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -628,8 +634,9 @@ body {
 }
 .form-order__message {
   padding: 20px;
+  padding-top: 15px;
   height: 170px;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.45);
   font-size: 14px;
   font-weight: 300;
   font-family: "OpenSans";
@@ -673,7 +680,7 @@ body {
   height: 50px;
   margin-bottom: 10px;
   width: 100%;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.45);
   font-size: 14px;
   font-weight: 300;
   font-family: "OpenSans";
@@ -750,8 +757,8 @@ body {
   padding-right: 15px;
 }
 .contacts__title {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 33px;
+  margin-bottom: 20px;
   font-size: 36px;
   font-weight: 300;
   text-transform: uppercase;
@@ -760,7 +767,7 @@ body {
 .contacts__item {
   position: relative;
   padding-left: 39px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   color: #fff;
   font-size: 18px;
   font-weight: 300;
@@ -808,11 +815,12 @@ body {
   color: inherit;
 }
 .contacts .soc-links {
+  margin-left: 0;
   margin-bottom: 30px;
 }
 .contacts .soc-links__item {
   margin-left: 0;
-  margin-right: 24px;
+  margin-right: 20px;
 }
 .contacts .order-btn {
   display: block;
@@ -820,17 +828,21 @@ body {
   text-align: center;
 }
 .page-footer {
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 40px;
   text-align: center;
+}
+.page-footer__container {
+  width: 930px;
+  margin: 0 auto;
 }
 .copyright {
   font-size: 18px;
   color: #7ec9c3;
 }
 .experiment-promo {
-  padding-top: 140px;
-  padding-bottom: 60px;
+  padding-top: 135px;
+  padding-bottom: 55px;
   background-image: url(../img/experiment-promo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -857,15 +869,13 @@ body {
   width: 71px;
   height: 80px;
   left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
+  bottom: 6px;
   background-image: url(../img/experiment-before.png);
 }
 .experiment-gallery {
   position: relative;
-  padding-top: 110px;
-  padding-bottom: 20px;
+  padding-top: 108px;
+  padding-bottom: 13px;
   overflow: hidden;
 }
 .experiment-gallery:before {
@@ -873,7 +883,7 @@ body {
   position: absolute;
   width: 90px;
   height: 123px;
-  top: -50px;
+  top: -47px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -932,7 +942,8 @@ body {
   padding-right: 15px;
 }
 .experiment-details .experiment-details__item {
-  margin-bottom: 20px;
+  padding-left: 40px;
+  margin-bottom: 15px;
   font-size: 18px;
 }
 .experiment-details .experiment-details__item:last-child {
@@ -968,8 +979,8 @@ body {
   background-image: url(../img/catalog-item__details-item--time.png);
 }
 .experiment-description {
-  padding-top: 20px;
-  padding-bottom: 45px;
+  padding-top: 25px;
+  padding-bottom: 48px;
 }
 .experiment-description__container {
   width: 930px;
@@ -996,22 +1007,23 @@ body {
 .booking__container {
   width: 930px;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 .booking__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 36px;
   font-weight: 300;
   text-transform: uppercase;
   color: #7ec9c3;
 }
 .booking__price {
+  margin-bottom: 30px;
   font-size: 18px;
   font-weight: 300;
 }
@@ -1031,22 +1043,22 @@ body {
 .booking-dates__item {
   font-size: 24px;
   font-weight: 300;
-  color: #fff;
+  color: #7ec9c3;
   text-align: center;
 }
 .booking-dates__item--holiday {
-  color: #7ec9c3;
+  color: #fff;
 }
 .booking-dates__item-day {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .booking-dates__time {
   list-style: none;
   -webkit-padding-start: 0;
 }
 .booking-dates__time-item {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 .booking-dates__time-item:hover {
   cursor: pointer;
@@ -1062,11 +1074,11 @@ body {
 }
 .booking-dates__arrow--next {
   right: -30px;
-  top: 0;
+  top: 5px;
 }
 .booking-dates__arrow--prev {
   left: -30px;
-  top: 0;
+  top: 5px;
   transform: rotate(180deg);
 }
 .booking-verification {
@@ -1079,6 +1091,7 @@ body {
   width: 930px;
   margin: 0 auto;
   padding: 50px;
+  padding-top: 40px;
   padding-bottom: 0;
   background-color: #000;
   border: 2px solid #7ec9c3;
@@ -1087,7 +1100,7 @@ body {
 }
 .booking-verification__title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 36px;
   font-weight: 300;
   text-transform: uppercase;
