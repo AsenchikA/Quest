@@ -361,7 +361,7 @@ body {
 .catalog {
   position: relative;
   padding-top: 90px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
   overflow: hidden;
 }
 .catalog:before {
@@ -489,7 +489,7 @@ body {
       flex-wrap: wrap;
 }
 .about-us {
-  padding-top: 45px;
+  padding-top: 55px;
   padding-bottom: 90px;
   background-color: #000;
   text-align: center;
@@ -716,12 +716,13 @@ body {
 .order-btn {
   width: 290px;
   height: 50px;
+  padding: 10px;
   background: #3f7772;
   color: #fff;
   text-transform: uppercase;
+  font-family: 'OpenSans', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  line-height: 50px;
   border: 2px solid transparent;
 }
 .order-btn:hover {
@@ -1182,7 +1183,7 @@ body {
   display: none;
 }
 .form-booking__message {
-  padding-top: 18px;
+  padding-top: 13px;
   padding-left: 18px;
   height: 170px;
   width: 100%;
@@ -1232,7 +1233,7 @@ body {
   color: #fff;
 }
 .form-booking__label--name {
-  top: 20px;
+  top: 15px;
 }
 .form-booking__label--phone {
   top: 75px;
@@ -1246,9 +1247,11 @@ body {
 .form-booking__details {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   margin-bottom: 30px;
+  margin-left: 110px;
+  margin-right: 110px;
 }
 .form-booking__details-title {
   font-size: 24px;
